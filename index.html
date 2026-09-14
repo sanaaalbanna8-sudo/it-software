@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A4 Computer software in an IT system</title>
+  <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <div class="orb c"></div>
+  </div>
+
+  <header class="hud">
+    <div class="brand">
+      <span class="mark">A4</span>
+      <span>
+        <b>Computer software</b>
+        <small>Unit 1 · IT Systems</small>
+      </span>
+    </div>
+    <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+    <div class="hud-actions">
+      <button class="icon-btn" id="full-btn" type="button" title="ملء الشاشة">⛶</button>
+    </div>
+  </header>
+
+  <main class="deck" id="deck">
+    <section class="slide active" data-title="Intro">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="kicker">Learning outcome A · A4</div>
+          <h1>
+            Computer software in an IT system
+            <span class="en">برامج الحاسوب في نظام تكنولوجيا المعلومات</span>
+          </h1>
+          <p class="lead">مفاهيم وآثار استخدام العتاد والبرمجيات والعلاقات بينهما في أنظمة IT الكبيرة والصغيرة، وأثرها على المؤسسات وأصحاب المصلحة.</p>
+          <div class="chips">
+            <span class="chip">Operating system</span>
+            <span class="chip">User interfaces</span>
+            <span class="chip">Utility software</span>
+            <span class="chip">Application software</span>
+            <span class="chip">File types</span>
+          </div>
+          <div class="grid grid-3">
+            <article class="card"><div class="num">OS</div><h3>Operating system</h3><p>يربط العتاد Hardware بالبرامج Software.</p></article>
+            <article class="card"><div class="num">UT</div><h3>Utility software</h3><p>يصون النظام ويحسّن أداءه.</p></article>
+            <article class="card"><div class="num">APP</div><h3>Application software</h3><p>ينجز مهمة المستخدم النهائي.</p></article>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="img/hero-software.png" alt="Digital devices and software" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="OS">
+      <div class="kicker">Operating system</div>
+      <h2>نظام التشغيل <span class="en">Operating system (OS)</span></h2>
+      <p class="lead">الأساس الذي يمكّن البرامج المثبتة من العمل — واجهة بين Hardware و Software. أمثلة: Windows، macOS، iOS، Android، ChromeOS. واجهات رسومية Graphical. تاريخيًا: DOS.</p>
+      <div class="flow">
+        <span>Hardware</span><span class="arrow">←</span>
+        <span>Operating system</span><span class="arrow">←</span>
+        <span>Utility software</span><span class="arrow">←</span>
+        <span>Application software</span>
+      </div>
+    </section>
+
+    <section class="slide" data-title="OS types">
+      <div class="kicker">Types of operating system</div>
+      <h2>أنواع أنظمة التشغيل</h2>
+      <div class="grid grid-6" style="margin-top:14px;grid-template-columns:repeat(3,1fr)">
+        <article class="card photo-card"><img src="img/os-rtos.png" alt="" /><span>Real time (RTOS)</span></article>
+        <article class="card photo-card"><img src="img/os-embedded.png" alt="" /><span>Embedded</span></article>
+        <article class="card photo-card"><img src="img/os-single-task.png" alt="" /><span>Single-task · single-user</span></article>
+        <article class="card photo-card"><img src="img/os-multitask.png" alt="" /><span>Multitasking · single-user</span></article>
+        <article class="card photo-card"><img src="img/os-multiuser.png" alt="" /><span>Multi-user</span></article>
+        <article class="card photo-card"><img src="img/os-pacemaker.png" alt="" /><span>Embedded · medical device</span></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="OS types detail">
+      <div class="split">
+        <div class="col auto">
+          <h2>Real time · Embedded · Single-task</h2>
+          <ul class="when">
+            <li><strong>Real time (RTOS):</strong> يعالج البيانات في الزمن الحقيقي — مثل RTLinux، Windows CE</li>
+            <li><strong>Embedded:</strong> مدمج في العتاد للتحكم بجهاز — سيارة، تلفاز، pacemaker، مرآة ذكية</li>
+            <li><strong>Single-task / single-user:</strong> تطبيق واحد فقط — هاتف أساسي</li>
+          </ul>
+        </div>
+        <div class="col manual">
+          <h2>Multitasking · Multi-user</h2>
+          <ul class="when">
+            <li><strong>Multitasking / single-user:</strong> تطبيقات متعددة لمستخدم واحد — هاتف ذكي، PC</li>
+            <li><strong>Multi-user:</strong> عدة مستخدمين معًا — Unix، servers، cloud collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="When OS">
+      <div class="kicker">Choice of OS · Scenarios</div>
+      <h2>متى نختار أي نوع؟</h2>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card auto">
+          <h3>Real time / Embedded</h3>
+          <p>جهاز يتحكم بآلة، أو يجب أن يستجيب فورًا بلا تأخير ملحوظ.</p>
+          <ul class="when">
+            <li>وسائد هوائية في سيارة · منظم ضربات القلب</li>
+            <li>فرن ذكي / غسالة / مرآة حمّام مضادة للضباب</li>
+            <li>لوحة قيادة رقمية أو روبوت مصنع</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Single-task</h3>
+          <p>جهاز بسيط رخيص ووظيفة واحدة واضحة — لا حاجة لتطبيقات متزامنة.</p>
+          <ul class="when">
+            <li>هاتف أساسي للمكالمات والرسائل فقط</li>
+            <li>آلة حاسبة مكتبية أو ساعة رقمية بسيطة</li>
+            <li>جهاز نقطة بيع قديم يعرض قائمة واحدة فقط</li>
+          </ul>
+        </article>
+        <article class="card manual">
+          <h3>Multitasking · single-user</h3>
+          <p>أفراد وشركات على حواسيب شخصية وهواتف: أكثر من عمل في آن.</p>
+          <ul class="when">
+            <li>طالب: متصفح + مستند + موسيقى معًا</li>
+            <li>موظف: Excel + بريد + اجتماع Teams</li>
+            <li>هاتف ذكي: خرائط + واتساب + كاميرا</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Multi-user</h3>
+          <p>تعاون عبر خادم أو سحابة، أو موارد مشتركة لكثير من الموظفين.</p>
+          <ul class="when">
+            <li>مدرسة: طلاب يدخلون نفس الخادم معًا</li>
+            <li>شركة: Google Sheets / OneDrive لفريق كامل</li>
+            <li>مستشفى: عدة أطباء يصلون لقاعدة بيانات المرضى</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="OS role">
+      <div class="kicker">Role of the operating system</div>
+      <h2>دور نظام التشغيل في الإدارة</h2>
+      <div class="grid grid-3" style="margin-top:14px">
+        <article class="card"><div class="num">01</div><h3>Networking</h3><p>الوصول لموارد الشبكة: remote printing، إدارة المستخدمين، file backup.</p></article>
+        <article class="card"><div class="num">02</div><h3>Security</h3><p>فحوصات مستمرة للهجمات؛ جمع بيانات عن صحة النظام لمكافحة cyber attacks.</p></article>
+        <article class="card"><div class="num">03</div><h3>Memory management</h3><p>توزيع الذاكرة بكفاءة. الأنظمة multi-user تعمل غالبًا من servers.</p></article>
+        <article class="card"><div class="num">04</div><h3>Multitasking</h3><p>حصص صغيرة من زمن المعالج بالتناوب — يبدو متزامنًا.</p></article>
+        <article class="card"><div class="num">05</div><h3>Device drivers</h3><p>تربط الجهاز الرقمي بالطرفيات: printers، keyboards، screens.</p></article>
+        <article class="card auto"><div class="num">!</div><h3>Limit</h3><p>الذاكرة وقوة المعالجة محدودة — كثرة التطبيقات تبطئ الأداء.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Multitasking">
+      <div class="lab">
+        <div>
+          <div class="kicker">Multitasking</div>
+          <h2>يبدو متزامنًا… والمعالج يتناوب</h2>
+          <p class="lead">نظام التشغيل يعطي كل process حصة صغيرة من processor time. السرعة تخدع العين فتبدو المهام متزامنة.</p>
+          <div class="card" style="margin-top:14px">
+            <h3>مثال الصف</h3>
+            <p>Antivirus في الخلفية + متصفح + مستند + موسيقى = multitasking بالتناوب، لا بمعالجات لا نهائية.</p>
+          </div>
+        </div>
+        <div class="hero-media" style="min-height:280px">
+          <img src="img/perf-overload.png" alt="Overloaded laptop" style="min-height:280px;object-fit:cover;width:100%;height:100%" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="UI">
+      <div class="kicker">User interfaces (UI)</div>
+      <h2>عوامل اختيار واستخدام الواجهات</h2>
+      <div class="grid grid-4" style="margin-top:14px">
+        <article class="card photo-card"><img src="img/ui-gui.png" alt="" /><span>Graphical (GUI)</span></article>
+        <article class="card photo-card"><img src="img/ui-cli.png" alt="" /><span>Command line</span></article>
+        <article class="card photo-card"><img src="img/ui-menu.png" alt="" /><span>Menu-based</span></article>
+        <article class="card photo-card"><img src="img/ui-wimp-easy.png" alt="" /><span>Adapted</span></article>
+      </div>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card"><h3>Graphical (GUI / WIMP)</h3><p>Windows, Icons, Menus, Pointer. سهلة بلا برمجة. تحتاج ذاكرة وطاقة أكبر. توسّع إمكانية الوصول accessibility.</p></article>
+        <article class="card"><h3>Command line</h3><p>أوامر نصية. مرونة أعلى وأجهزة بمواصفات أقل. تحتاج معرفة commands. مثال: إعداد router عبر terminal.</p></article>
+        <article class="card"><h3>Menu-based</h3><p>وظائف عبر قائمة. ذاكرة أقل من GUI. قد تقدّم خيارات إضافية لكن تحتاج معرفة أين الوظيفة.</p></article>
+        <article class="card"><h3>Adapted</h3><p>تكييف اللون وحجم الخط والموضع — مهم لضعف البصر واحتياجات خاصة.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="When UI">
+      <div class="kicker">How and when interfaces are used</div>
+      <h2>متى نستخدم كل واجهة؟</h2>
+      <div class="rule" style="margin-top:12px">
+        <div class="ask">من المستخدم؟ وما الهدف؟ وهل تحتاج Adapted UI؟</div>
+        <article class="card auto">
+          <h3>Graphical / Adapted</h3>
+          <p>مستخدم جديد، إدارة يومية، ترفيه، سهولة. Adapted لدعم accessibility.</p>
+        </article>
+        <article class="card manual">
+          <h3>Command line</h3>
+          <p>Software developer، data engineer، IT technician — شبكات وأمان. تحكم أدق.</p>
+        </article>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <p><strong>أثر الواجهة على الأداء:</strong> GUI تزيد المتطلبات على storage والأداء مقارنةً بخيارات أخف مثل command line أو menu-based.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-title="CMD lab">
+      <div class="kicker">Activity · Command line</div>
+      <h2>جرّب CMD على جهازك</h2>
+      <p class="lead" style="margin-bottom:10px">افتح <strong>cmd</strong> (Win + R ← اكتب <span class="ltr" dir="ltr">cmd</span> ← Enter). أوامر آمنة للقراءة فقط — لا تغيّر الشبكة ولا تحذف شيئًا.</p>
+      <div class="grid grid-2">
+        <article class="card auto">
+          <h3>1) من أنا على الشبكة؟</h3>
+          <ul class="when">
+            <li><code dir="ltr">ipconfig</code> — اعرف IP جهازك</li>
+            <li><code dir="ltr">ipconfig /all</code> — تفاصيل أكثر (MAC, DNS)</li>
+            <li><code dir="ltr">getmac</code> — عنوان MAC فقط</li>
+            <li><code dir="ltr">hostname</code> — اسم الجهاز</li>
+            <li><code dir="ltr">whoami</code> — اسم المستخدم الحالي</li>
+          </ul>
+        </article>
+        <article class="card manual">
+          <h3>2) «Hacks» لطيفة وآمنة</h3>
+          <ul class="when">
+            <li><code dir="ltr">ping 8.8.8.8</code> — هل الإنترنت يصل؟</li>
+            <li><code dir="ltr">ping localhost</code> — اختبر جهازك نفسه</li>
+            <li><code dir="ltr">nslookup google.com</code> — حوّل الاسم إلى IP</li>
+            <li><code dir="ltr">tracert google.com</code> — مسار الرحلة (قد يبطئ قليلًا)</li>
+            <li><code dir="ltr">systeminfo</code> — ملخص عتاد ونظام التشغيل</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>3) استكشاف الملفات</h3>
+          <ul class="when">
+            <li><code dir="ltr">dir</code> — محتويات المجلد الحالي</li>
+            <li><code dir="ltr">cd Desktop</code> — انتقل لسطح المكتب</li>
+            <li><code dir="ltr">tree /F</code> — شجرة المجلدات (جرّبها بمجلد صغير)</li>
+            <li><code dir="ltr">cls</code> — نظّف الشاشة</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>4) لمسات ممتعة</h3>
+          <ul class="when">
+            <li><code dir="ltr">color a</code> — نص أخضر كلاسيكي</li>
+            <li><code dir="ltr">color 0b</code> — خلفية سوداء ونص سماوي</li>
+            <li><code dir="ltr">ver</code> — إصدار Windows</li>
+            <li><code dir="ltr">help</code> — قائمة الأوامر · <code dir="ltr">help ping</code> لشرح أمر</li>
+            <li><code dir="ltr">echo Hello class!</code> — اطبع رسالة</li>
+          </ul>
+        </article>
+      </div>
+      <div class="card" style="margin-top:12px;text-align:center">
+        <p style="margin:0"><strong>قاعدة الصف:</strong> نستخدم أوامر قراءة واستعلام فقط. ممنوع: حذف ملفات، تغيير إعدادات الشبكة، أو أوامر تؤثر على أجهزة الآخرين.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-title="OS performance">
+      <div class="kicker">Factors affecting OS use and performance</div>
+      <h2>ما يؤثر في أداء نظام التشغيل؟</h2>
+      <div class="grid grid-2" style="margin-top:14px">
+        <article class="card"><h3>Amount of data being processed</h3><p>بث فيديو + تحرير أثقل من جداول ومستندات إدارية بسيطة.</p></article>
+        <article class="card"><h3>Hardware specifications</h3><p>الذاكرة وسرعة المعالجة. برامج خلفية كثيرة تبطئ laptop.</p></article>
+        <article class="card"><h3>Compatibility with other systems</h3><p>بعض البرامج لا تعمل على كل OS — مثل اختلاف Apple و Android.</p></article>
+        <article class="card"><h3>Number of applications</h3><p>كلّما زاد multitasking زاد الضغط على memory و CPU.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Utility">
+      <div class="kicker">Utility software</div>
+      <h2>برامج الأداة المساعدة</h2>
+      <p class="lead">تعمل مع نظام التشغيل لمهام روتينية: حماية، صيانة، تحسين.</p>
+      <div class="grid grid-4" style="margin-top:12px">
+        <article class="card photo-card"><img src="img/util-antivirus.png" alt="" /><span>Antivirus / anti-malware · Firewall</span></article>
+        <article class="card photo-card"><img src="img/util-cleanup.png" alt="" /><span>Compression · Disk analysers</span></article>
+        <article class="card photo-card"><img src="img/util-backup.png" alt="" /><span>Backup software</span></article>
+        <article class="card photo-card"><img src="img/util-driver.png" alt="" /><span>Device drivers · peripherals</span></article>
+      </div>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card">
+          <h3>Also includes</h3>
+          <p>Disk defragmenters · Disk partitioners · Encryption software · File managers · Network utilities</p>
+        </article>
+        <article class="card manual">
+          <h3>Choice &amp; performance</h3>
+          <p>حسب الحاجة. تصفح + VoIP قد لا يحتاج printer driver. احذر تعارض عدة antivirus، ونقص memory أو bandwidth.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Applications">
+      <div class="kicker">Application software</div>
+      <h2>برامج التطبيقات</h2>
+      <div class="grid grid-3" style="margin-top:12px">
+        <article class="card photo-card"><img src="img/app-comms.png" alt="" /><span>Communications software</span></article>
+        <article class="card photo-card"><img src="img/app-cad.png" alt="" /><span>CAD</span></article>
+        <article class="card photo-card"><img src="img/app-office.png" alt="" /><span>Office software · DBMS</span></article>
+        <article class="card photo-card"><img src="img/app-entertainment.png" alt="" /><span>Entertainment software</span></article>
+        <article class="card photo-card"><img src="img/app-agriculture.png" alt="" /><span>Industry applications</span></article>
+        <article class="card"><div class="num">ERP</div><h3>Enterprise resource packages</h3><p>شراء، مبيعات، مخزون، محاسبة متكاملة.</p></article>
+      </div>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card"><h3>Also</h3><p>Digital graphics and animation · DBMS يسترجع ويدير ويعالج بيانات قاعدة البيانات.</p></article>
+        <article class="card"><h3>Choice factors</h3><p>سهولة الاستخدام، التوافق interoperability، مهارات الموظفين، الصناعة (مثل Apple في creative industries).</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Open source">
+      <div class="term">
+        <img src="img/open-vs-prop.png" alt="Open source versus proprietary" />
+        <div>
+          <div class="kicker">Open source × Proprietary</div>
+          <h2>مبادئ وآثار المصدر</h2>
+          <div class="grid grid-2" style="margin-top:10px">
+            <article class="card auto">
+              <h3>Open source</h3>
+              <p>تعاوني، peer review، مجاني، قابل للنسخ والتكييف. خطر تعديل خبيث أو غير خبير — تحقق من المصدر.</p>
+            </article>
+            <article class="card manual">
+              <h3>Proprietary</h3>
+              <p>ملك الشركة، سري، يُشترى للاستخدام لا لتعديل source code. تصحيحات من المطوّر. قد يكون مكلفًا.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="When licence">
+      <div class="kicker">When to choose</div>
+      <h2>Open source أم Proprietary؟</h2>
+      <div class="grid grid-2" style="margin-top:14px">
+        <article class="card auto">
+          <h3>Open source عندما</h3>
+          <ul class="when">
+            <li>ميزانية محدودة مع قدرات متقدمة</li>
+            <li>حاجة لتكييف الشفرة أو التعلم والمساهمة</li>
+            <li>مصدر موثوق وتحديثات منتظمة</li>
+          </ul>
+        </article>
+        <article class="card manual">
+          <h3>Proprietary عندما</h3>
+          <ul class="when">
+            <li>دعم رسمي وتصحيحات مضمونة</li>
+            <li>توافق معروف مع بيئة المؤسسة</li>
+            <li>استخدام جاهز بلا تعديل المصدر</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="File types">
+      <div class="kicker">Common file types and formats</div>
+      <h2>أنواع الملفات الشائعة</h2>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card"><h3>Images</h3><p>GIF · PNG · JPEG · RAW · SVG</p></article>
+        <article class="card"><h3>Videos</h3><p>MPEG · AVI</p></article>
+        <article class="card"><h3>Audio</h3><p>MP3 · WAV</p></article>
+        <article class="card"><h3>Application software</h3><p>DOC · RTF · XLS · XML · PDF</p></article>
+      </div>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card photo-card"><img src="img/file-jpeg.png" alt="" /><span>JPEG — أصغر حجمًا للمشاركة</span></article>
+        <article class="card photo-card"><img src="img/file-raw.png" alt="" /><span>RAW — تعديل بجودة أعلى</span></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="File implications">
+      <div class="kicker">Implications for IT systems, organisations &amp; stakeholders</div>
+      <h2>آثار اختيار نوع الملف</h2>
+      <div class="grid grid-2" style="margin-top:12px">
+        <article class="card"><h3>JPEG</h3><p>ضغط مع فقدان. مساحة أقل. مناسب للبريد. قد لا يكفي لجودة عالية.</p></article>
+        <article class="card"><h3>PNG / GIF</h3><p>ضغط بلا فقدان. PNG أشيع. GIF للصور المتحركة.</p></article>
+        <article class="card"><h3>RAW</h3><p>غير مضغوط؛ يحتاج برامج مناسبة للتعديل. حجم أكبر.</p></article>
+        <article class="card"><h3>DOC × RTF</h3><p>RTF أخف للمشاركة عبر إصدارات مختلفة. DOC للتنسيق الغني.</p></article>
+        <article class="card"><h3>MP3 × MPEG / AVI</h3><p>MP3 صوت. ملفات الفيديو أكبر. توافق وأمان الملفات يؤثران على الاستخدام.</p></article>
+        <article class="card manual"><h3>Stakeholders</h3><p>تحديث الأنظمة قد يؤخر العمل. عدم التوافق يعيق العملاء والموردين والموظفين. الانتقال يحتاج تدريبًا.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Challenge">
+      <div class="game-intro" id="game-intro">
+        <div class="kicker">Challenge</div>
+        <h2>ما المصطلح الصحيح؟</h2>
+        <p class="lead" style="margin:0 auto">20 صورة. اختر المصطلح الإنجليزي من مواصفات A4، ثم اقرأ السبب.</p>
+        <div class="stat">
+          <b>20<small>صور</small></b>
+          <b>OS · UI · Utility · App<small>Files</small></b>
+          <b>+1<small>لكل إجابة</small></b>
+        </div>
+        <button class="start" id="start-game" type="button">Start challenge</button>
+      </div>
+      <div class="game" id="game-board" hidden>
+        <div class="game-photo">
+          <img id="g-img" alt="" />
+          <div class="badge" id="g-round">1 / 20</div>
+        </div>
+        <div class="choices">
+          <div class="hud-score">
+            <span id="g-score">Score 0</span>
+            <span id="g-streak">Streak 0</span>
+          </div>
+          <h3 id="g-title">...</h3>
+          <button class="choice manual" id="pick-a" type="button">A</button>
+          <button class="choice auto" id="pick-b" type="button">B</button>
+          <div class="why" id="g-why" hidden></div>
+        </div>
+      </div>
+      <div class="result" id="game-result" hidden>
+        <div class="kicker">Finished</div>
+        <div class="score-ring" id="score-ring"><b id="final-score">0</b></div>
+        <h2 id="result-title">أحسنت</h2>
+        <p class="lead" id="result-msg" style="margin:0 auto"></p>
+        <div style="margin-top:22px;display:flex;justify-content:center">
+          <button class="start" id="replay" type="button">Play again</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Recap">
+      <div class="kicker">A4 recap</div>
+      <h2>خريطة مصطلحات سريعة</h2>
+      <div class="grid grid-2" style="margin-top:14px">
+        <article class="card auto">
+          <h3>Operating system</h3>
+          <ul class="when">
+            <li><strong>Real time / Embedded:</strong> آلة أو استجابة فورية</li>
+            <li><strong>Multitasking · single-user:</strong> PC / smartphone</li>
+            <li><strong>Multi-user:</strong> server / cloud</li>
+            <li><strong>Manages:</strong> networking · security · memory · multitasking · device drivers</li>
+          </ul>
+        </article>
+        <article class="card manual">
+          <h3>UI · Software · Files</h3>
+          <ul class="when">
+            <li><strong>Graphical / Command line / Menu-based / Adapted</strong></li>
+            <li><strong>Utility</strong> يصون · <strong>Application</strong> ينجز</li>
+            <li><strong>Open source × Proprietary</strong></li>
+            <li><strong>Images / Videos / Audio / DOC·RTF·XLS·XML·PDF</strong></li>
+          </ul>
+        </article>
+      </div>
+      <div class="card" style="margin-top:14px;text-align:center">
+        <h3 style="margin:0">السؤال الذهبي: What role is needed now?</h3>
+        <p style="margin:8px 0 0">Run hardware · Ease use · Maintain · Do the job · Share the right file format</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="pager">
+    <button class="nav-btn" id="prev" type="button">السابق</button>
+    <div class="dots" id="dots"></div>
+    <button class="nav-btn" id="next" type="button">التالي</button>
+  </nav>
+  <canvas id="confetti"></canvas>
+
+  <script src="js/game.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
