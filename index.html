@@ -76,12 +76,12 @@
       <div class="kicker">Types of operating system</div>
       <h2>أنواع أنظمة التشغيل</h2>
       <div class="grid grid-6" style="margin-top:14px;grid-template-columns:repeat(3,1fr)">
-        <article class="card photo-card"><img src="img/os-rtos.png" alt="" /><span>Real time (RTOS)</span></article>
-        <article class="card photo-card"><img src="img/os-embedded.png" alt="" /><span>Embedded</span></article>
-        <article class="card photo-card"><img src="img/os-single-task.png" alt="" /><span>Single-task · single-user</span></article>
-        <article class="card photo-card"><img src="img/os-multitask.png" alt="" /><span>Multitasking · single-user</span></article>
-        <article class="card photo-card"><img src="img/os-multiuser.png" alt="" /><span>Multi-user</span></article>
-        <article class="card photo-card"><img src="img/os-pacemaker.png" alt="" /><span>Embedded · medical device</span></article>
+        <article class="card photo-card"><img src="img/os-rtos.png" alt="" /><span>Real time (RTOS)<br />الزمن الحقيقي</span></article>
+        <article class="card photo-card"><img src="img/os-embedded.png" alt="" /><span>Embedded<br />مدمج</span></article>
+        <article class="card photo-card"><img src="img/os-single-task.png" alt="" /><span>Single-task · single-user<br />مهمة واحدة · مستخدم واحد</span></article>
+        <article class="card photo-card"><img src="img/os-multitask.png" alt="" /><span>Multitasking · single-user<br />متعدد المهام · مستخدم واحد</span></article>
+        <article class="card photo-card"><img src="img/os-multiuser.png" alt="" /><span>Multi-user<br />متعدد المستخدمين</span></article>
+        <article class="card photo-card"><img src="img/os-pacemaker.png" alt="" /><span>Embedded · medical device<br />مدمج · جهاز طبي</span></article>
       </div>
     </section>
 
@@ -90,16 +90,41 @@
         <div class="col auto">
           <h2>Real time · Embedded · Single-task</h2>
           <ul class="when">
-            <li><strong>Real time (RTOS):</strong> يعالج البيانات في الزمن الحقيقي — مثل RTLinux، Windows CE</li>
-            <li><strong>Embedded:</strong> مدمج في العتاد للتحكم بجهاز — سيارة، تلفاز، pacemaker، مرآة ذكية</li>
-            <li><strong>Single-task / single-user:</strong> تطبيق واحد فقط — هاتف أساسي</li>
+            <li>
+              <strong>Real time (RTOS) · الزمن الحقيقي:</strong>
+              يعالج البيانات فورًا بلا تأخير ملحوظ.
+              <br /><em>مثال:</em> RTLinux، Windows CE — وسادة هوائية أو منظم ضربات قلب.
+              <br /><em>متى؟</em> عندما يكون التأخير خطرًا على السلامة أو الآلة.
+            </li>
+            <li>
+              <strong>Embedded · مدمج:</strong>
+              برنامج داخل العتاد للتحكم بجهاز محدد.
+              <br /><em>مثال:</em> سيارة، تلفاز، pacemaker، مرآة ذكية، غسالة.
+              <br /><em>متى؟</em> جهاز بوظيفة ثابتة لا يحتاج نظام سطح مكتب كامل.
+            </li>
+            <li>
+              <strong>Single-task / single-user · مهمة واحدة · مستخدم واحد:</strong>
+              يشغّل تطبيقًا واحدًا فقط لمستخدم واحد.
+              <br /><em>مثال:</em> هاتف أساسي للمكالمات والرسائل.
+              <br /><em>متى؟</em> جهاز بسيط ورخيص ووظيفة واحدة واضحة فقط.
+            </li>
           </ul>
         </div>
         <div class="col manual">
           <h2>Multitasking · Multi-user</h2>
           <ul class="when">
-            <li><strong>Multitasking / single-user:</strong> تطبيقات متعددة لمستخدم واحد — هاتف ذكي، PC</li>
-            <li><strong>Multi-user:</strong> عدة مستخدمين معًا — Unix، servers، cloud collaboration</li>
+            <li>
+              <strong>Multitasking / single-user · متعدد المهام · مستخدم واحد:</strong>
+              تطبيقات متعددة معًا لنفس الشخص.
+              <br /><em>مثال:</em> هاتف ذكي أو PC — متصفح + مستند + موسيقى.
+              <br /><em>متى؟</em> عمل أو دراسة يومية تحتاج أكثر من برنامج في آن واحد.
+            </li>
+            <li>
+              <strong>Multi-user · متعدد المستخدمين:</strong>
+              عدة أشخاص يستخدمون نفس المورد معًا.
+              <br /><em>مثال:</em> Unix، servers، Google Sheets / OneDrive، خادم مدرسة.
+              <br /><em>متى؟</em> تعاون فريق أو مدرسة أو مستشفى على خادم أو سحابة مشتركة.
+            </li>
           </ul>
         </div>
       </div>
@@ -188,10 +213,23 @@
         <article class="card photo-card"><img src="img/ui-wimp-easy.png" alt="" /><span>Adapted</span></article>
       </div>
       <div class="grid grid-2" style="margin-top:12px">
-        <article class="card"><h3>Graphical (GUI / WIMP)</h3><p>Windows, Icons, Menus, Pointer. سهلة بلا برمجة. تحتاج ذاكرة وطاقة أكبر. توسّع إمكانية الوصول accessibility.</p></article>
+        <article class="card"><h3>Graphical (GUI)</h3><p>نوافذ وأيقونات وقوائم ومؤشر. سهلة بلا برمجة. تحتاج ذاكرة وطاقة أكبر. توسّع إمكانية الوصول accessibility.</p></article>
         <article class="card"><h3>Command line</h3><p>أوامر نصية. مرونة أعلى وأجهزة بمواصفات أقل. تحتاج معرفة commands. مثال: إعداد router عبر terminal.</p></article>
         <article class="card"><h3>Menu-based</h3><p>وظائف عبر قائمة. ذاكرة أقل من GUI. قد تقدّم خيارات إضافية لكن تحتاج معرفة أين الوظيفة.</p></article>
         <article class="card"><h3>Adapted</h3><p>تكييف اللون وحجم الخط والموضع — مهم لضعف البصر واحتياجات خاصة.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Menu-based places">
+      <div class="kicker">Menu-based · Where you see it</div>
+      <h2>أماكن استخدام Menu-based</h2>
+      <div class="grid grid-6" style="margin-top:14px;grid-template-columns:repeat(3,1fr)">
+        <article class="card photo-card"><img src="img/ui-menu-atm.png" alt="" /><span>ATM · صراف آلي</span></article>
+        <article class="card photo-card"><img src="img/ui-menu-microwave.png" alt="" /><span>Microwave · ميكروويف</span></article>
+        <article class="card photo-card"><img src="img/ui-menu-printer.png" alt="" /><span>Printer · طابعة</span></article>
+        <article class="card photo-card"><img src="img/ui-menu-ticket.png" alt="" /><span>Ticket machine · آلة تذاكر</span></article>
+        <article class="card photo-card"><img src="img/ui-menu-phone.png" alt="" /><span>Feature phone · هاتف أساسي</span></article>
+        <article class="card photo-card"><img src="img/ui-menu-tv.png" alt="" /><span>TV menu · قائمة التلفاز</span></article>
       </div>
     </section>
 
@@ -211,6 +249,47 @@
       </div>
       <div class="card" style="margin-top:12px">
         <p><strong>أثر الواجهة على الأداء:</strong> GUI تزيد المتطلبات على storage والأداء مقارنةً بخيارات أخف مثل command line أو menu-based.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Why CLI">
+      <div class="quote">
+        <div class="kicker">Think · Discuss</div>
+        <h2>سؤال للنقاش</h2>
+        <blockquote>
+          طالما عندنا واجهة رسومية (GUI) على الكمبيوتر…
+          <br />ليش لسا في Command line (CLI)؟
+        </blockquote>
+        <p class="lead" style="margin:0 auto">ناقش مع زميلك دقيقة واحدة قبل ما نكشف الجواب.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Why CLI answer">
+      <div class="kicker">GUI ↔ CMD</div>
+      <h2>نفس الشغل… بطريقتين</h2>
+      <p class="lead" style="margin-bottom:10px">كثير أشياء سهلة بالواجهة الرسومية لها مثيل في CMD — بس CLI مش بديل يومي دائمًا؛ هو أداة سرعة وطوارئ وفهم.</p>
+      <div class="grid grid-2" style="margin-top:8px">
+        <article class="card auto">
+          <h3>GUI → نفس الفكرة في CMD</h3>
+          <ul class="when">
+            <li>مستكشف الملفات ← <code dir="ltr">dir</code> · <code dir="ltr">cd</code></li>
+            <li>إعدادات الشبكة / IP ← <code dir="ltr">ipconfig</code></li>
+            <li>هل الإنترنت شغال؟ ← <code dir="ltr">ping 8.8.8.8</code></li>
+            <li>معلومات الجهاز ← <code dir="ltr">systeminfo</code></li>
+            <li>اسم الجهاز / المستخدم ← <code dir="ltr">hostname</code> · <code dir="ltr">whoami</code></li>
+          </ul>
+        </article>
+        <article class="card manual">
+          <h3>ليش نتعلّم CLI؟</h3>
+          <ul class="when">
+            <li><strong>السرعة:</strong> أمر واحد ينفّذ عمل يحتاج عدة نقرات في GUI.</li>
+            <li><strong>حالات الطوارئ:</strong> الواجهة الرسومية تعطّلت؟ الشاشة زرقاء؟ الشبكة مقطوعة؟ الـ terminal غالبًا آخر باب للوصول والإصلاح.</li>
+            <li><strong>فهم النظام:</strong> تشوف شو بصير فعليًا تحت الأيقونات — مفيد للدعم الفني والبرمجة والشبكات.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <p><strong>الخلاصة للطالب:</strong> GUI للسهولة اليومية · CLI للتحكم السريع، الإنقاذ، وفهم كيف يشتغل الجهاز من الداخل.</p>
       </div>
     </section>
 
