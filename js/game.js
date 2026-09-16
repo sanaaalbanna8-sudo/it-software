@@ -53,7 +53,7 @@ const GAME = [
     a: "Graphical UI (GUI)",
     b: "Command line",
     answer: "a",
-    why: "Graphical interface / WIMP — سهلة بلا برمجة؛ Adapted إن كُيّف الحجم واللون.",
+    why: "Graphical interface (GUI) — سهلة بلا برمجة؛ Adapted إن كُيّف الحجم واللون.",
   },
   {
     img: "img/game-router-cli.png",

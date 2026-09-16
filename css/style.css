@@ -351,7 +351,8 @@ h3 { font-size: 18px; }
 .col.manual { background: linear-gradient(180deg, rgba(255,122,89,.16), rgba(13,21,36,.7)); }
 .col.auto { background: linear-gradient(180deg, rgba(46,233,200,.14), rgba(13,21,36,.7)); }
 .col h2 { font-size: 28px; }
-.when li { margin: 8px 0; color: var(--ink); }
+.when li { margin: 8px 0; color: var(--ink); line-height: 1.45; font-size: 14.5px; }
+.col .when li em { color: var(--muted); font-style: normal; font-weight: 700; }
 .card .when { margin: 8px 0 0; padding-inline-start: 18px; }
 .card .when li { margin: 4px 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
 .card .when li strong, .card .when code { color: var(--ink); }
