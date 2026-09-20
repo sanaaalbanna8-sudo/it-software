@@ -4,6 +4,11 @@
 افتح:
   index.html
 
+امتحان الجزء الأول (حتى سؤال النقاش GUI/CLI):
+  exam.html
+  أو على GitHub Pages:
+  https://sanaaalbanna8-sudo.github.io/it-software/exam.html
+
 أو:
   python serve.py
 ثم:
